@@ -15,16 +15,14 @@ import UIKit
  
  Provides callbacks from listened UITextField.
  */
-@objc public protocol MaskedTextFieldDelegateListener: UITextFieldDelegate {
+public protocol MaskedTextFieldDelegateListener: UITextFieldDelegate {}
+
+extension MaskedTextFieldDelegateListener {
     
     /**
      Callback to return extracted value and to signal whether the user has complete input.
      */
-    @objc optional func textField(
-        _ textField: UITextField,
-        didFillMandatoryCharacters complete: Bool,
-        didExtractValue value: String
-    )
+    func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {}
     
 }
 
@@ -39,7 +37,7 @@ import UIKit
 @IBDesignable
 open class MaskedTextFieldDelegate: NSObject, UITextFieldDelegate {
 
-    open weak var listener: MaskedTextFieldDelegateListener?
+    open var listener: MaskedTextFieldDelegateListener?
     open var onMaskedTextChangedCallback: ((_ textField: UITextField, _ value: String, _ complete: Bool) -> ())?
 
     @IBInspectable open var primaryMaskFormat:   String
@@ -314,7 +312,7 @@ open class MaskedTextFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     open func notifyOnMaskedTextChangedListeners(forTextField textField: UITextField, result: Mask.Result) {
-        listener?.textField?(textField, didFillMandatoryCharacters: result.complete, didExtractValue: result.extractedValue)
+        listener?.textField(textField, didFillMandatoryCharacters: result.complete, didExtractValue: result.extractedValue)
         onMaskedTextChangedCallback?(textField, result.extractedValue, result.complete)
     }
 

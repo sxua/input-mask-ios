@@ -37,11 +37,11 @@
 		8A1E3C5E1D648A0F00589799 /* DayMonthYearShortCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E3C5C1D648A0F00589799 /* DayMonthYearShortCase.swift */; };
 		8A1E3C601D648C9E00589799 /* FormatSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E3C5F1D648C9E00589799 /* FormatSanitizer.swift */; };
 		8A3C8C0A21B14E7400CDBDE1 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C8C0921B14E7400CDBDE1 /* StringTests.swift */; };
-		8A4CDCCD210999C6005B2FA6 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CDCCC210999C6005B2FA6 /* UITextField.swift */; };
-		8A4CDCCF21099A71005B2FA6 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CDCCE21099A71005B2FA6 /* UITextView.swift */; };
 		8A3C8C0D21B1529D00CDBDE1 /* LargeNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C8C0C21B1529D00CDBDE1 /* LargeNumberTests.swift */; };
 		8A3C8C0F21B1841500CDBDE1 /* RTLMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C8C0E21B1841500CDBDE1 /* RTLMask.swift */; };
 		8A3C8C1121B1993B00CDBDE1 /* RTLCaretStringIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C8C1021B1993B00CDBDE1 /* RTLCaretStringIterator.swift */; };
+		8A4CDCCD210999C6005B2FA6 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CDCCC210999C6005B2FA6 /* UITextField.swift */; };
+		8A4CDCCF21099A71005B2FA6 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CDCCE21099A71005B2FA6 /* UITextView.swift */; };
 		8A4CDCD121099B6D005B2FA6 /* MaskedTextInputListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CDCD021099B6D005B2FA6 /* MaskedTextInputListener.swift */; };
 		8A4CDCD32109C0D4005B2FA6 /* AffinityCalculationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CDCD22109C0D4005B2FA6 /* AffinityCalculationStrategy.swift */; };
 		8A4CDCD42109C2D0005B2FA6 /* AffinityCalculationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CDCD22109C0D4005B2FA6 /* AffinityCalculationStrategy.swift */; };
@@ -90,7 +90,7 @@
 		8A076E0120923F830056476F /* Notation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notation.swift; sourceTree = "<group>"; };
 		8A076E03209275750056476F /* DecimalNumberCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalNumberCase.swift; sourceTree = "<group>"; };
 		8A1256F120BE95CB005E3324 /* CustomNotationEllipticalCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotationEllipticalCase.swift; sourceTree = "<group>"; };
-		8A1DD0B0210108A7008BAE2A /* MaskedTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedTextViewDelegate.swift; sourceTree = "<group>"; };
+		8A1DD0B0210108A7008BAE2A /* MaskedTextViewDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MaskedTextViewDelegate.swift; sourceTree = "<group>"; tabWidth = 4; };
 		8A1E3C4C1D64649200589799 /* CaretStringIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaretStringIterator.swift; sourceTree = "<group>"; };
 		8A1E3C4F1D647BA800589799 /* DayMonthYearCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayMonthYearCase.swift; sourceTree = "<group>"; };
 		8A1E3C511D647E1700589799 /* MonthYearDoubleSlashCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthYearDoubleSlashCase.swift; sourceTree = "<group>"; };
@@ -427,7 +427,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Egor Taflanidi";
 				TargetAttributes = {
 					518F8AAC1F36A98400065733 = {
@@ -446,10 +446,11 @@
 			};
 			buildConfigurationList = 8A808EC51D5B0FEC00A75B9C /* Build configuration list for PBXProject "InputMask" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8A808EC11D5B0FEC00A75B9C;
 			productRefGroup = 8A808ECC1D5B0FEC00A75B9C /* Products */;
@@ -602,7 +603,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -631,7 +632,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -766,7 +767,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -788,7 +789,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -800,7 +801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.redmadrobot.InputMaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -813,7 +814,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

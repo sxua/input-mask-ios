@@ -15,19 +15,16 @@ import UIKit
  
  Provides callbacks from listened UITextView.
  */
-@objc public protocol MaskedTextViewDelegateListener: UITextViewDelegate {
-    
+public protocol MaskedTextViewDelegateListener: UITextViewDelegate {}
+
+extension MaskedTextViewDelegateListener {
+
     /**
      Callback to return extracted value and to signal whether the user has complete input.
      */
-    @objc optional func textView(
-        _ textView: UITextView,
-        didFillMandatoryCharacters complete: Bool,
-        didExtractValue value: String
-    )
+    func textView(_ textView: UITextView, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {}
     
 }
-
 
 /**
  ### MaskedTextViewDelegate
@@ -39,7 +36,7 @@ import UIKit
 @IBDesignable
 open class MaskedTextViewDelegate: NSObject, UITextViewDelegate {
     
-    open weak var listener: MaskedTextViewDelegateListener?
+    open var listener: MaskedTextViewDelegateListener?
     open var onMaskedTextChangedCallback: ((_ textField: UITextView, _ value: String, _ complete: Bool) -> ())?
 
     @IBInspectable open var primaryMaskFormat:   String
@@ -321,7 +318,7 @@ open class MaskedTextViewDelegate: NSObject, UITextViewDelegate {
     }
     
     open func notifyOnMaskedTextChangedListeners(forTextView textView: UITextView, result: Mask.Result) {
-        listener?.textView?(textView, didFillMandatoryCharacters: result.complete, didExtractValue: result.extractedValue)
+        listener?.textView(textView, didFillMandatoryCharacters: result.complete, didExtractValue: result.extractedValue)
         onMaskedTextChangedCallback?(textView, result.extractedValue, result.complete)
     }
 
